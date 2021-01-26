@@ -1,9 +1,10 @@
 <%- include("partials/header") %>
-<h1>Search For a Movie</h1>
+<div id="tittle">Search For a Movie</div>
 
 <form action="/addresults" method="POST">
-    <input type="text" placeholder="search term" name="search">
-    <button>submit</button>
+    <label for="search"><b>Movie Name:</b></label>
+    <input  type="text" placeholder="search term" name="search" required><br>
+    <button class=btn >submit</button>
 </form>
 
 <%- include("partials/footer") %>

@@ -1,7 +1,22 @@
 <%- include("partials/header") %>
-        <h1>Results Page!!!</h1>
-        <p><%= data["Title"] %></p><br>
-        <p><%= data["Year"] %></p><br>
-        <a href="/">Search Again!</a>
+<% if(data !== null){ %>
+        <div id="tittle">Movie Info</div>
+      <div class="container">
+        <img class="container__image" src=<%= data["Poster"]  %> >
+        <div class="container__text"> 
+          <p><b>Title: </b><%= data["Title"] %></p>
+          <p><b>Year: </b><%= data["Year"] %></p>
+          <p><b>Released: </b> <%=data["Released"]%></p>
+          <p><b>Genre: </b><%=data["Genre"]%></p>
+          <p><b>Director: </b><%=data["Director"]%></p>
+          <p><b>Writer: </b><%=data["Writer"]%></p>
+          <p><b>Actors: </b><%=data["Actors"]%></p>
+          <p><b>imdbRating: </b><%=data["imdbRating"]%></p>
+          <a href="/">Search Again!</a></div>
+      </div>
+<% } %>
+<% if(error !== null){ %>
+  <p><%= error %></p>
+<% } %>
 <%- include("partials/footer") %>
 
