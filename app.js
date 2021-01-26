@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+const port = process.env.PORT || 3000;
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -32,8 +33,6 @@ app.post("/addresults", function(req, res){
 });
 
 
-
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('Movie App Server is up at port ' + port)
 });
